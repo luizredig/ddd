@@ -1,0 +1,23 @@
+{
+  "name": "ddd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizredig/ddd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizredig/ddd/issues"
+  },
+  "homepage": "https://github.com/luizredig/ddd#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.8",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
+  }
+}
