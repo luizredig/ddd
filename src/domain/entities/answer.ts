@@ -12,6 +12,14 @@ export default class Answer extends Entity<AnswerProps> {
     return this.props.content;
   }
 
+  get authorId(): UniqueEntityID {
+    return this.props.authorId;
+  }
+
+  get questionId(): UniqueEntityID {
+    return this.props.questionId;
+  }
+
   static create(props: AnswerProps, id?: UniqueEntityID): Answer {
     const answer = new Answer(props, id);
 

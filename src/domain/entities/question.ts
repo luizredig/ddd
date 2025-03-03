@@ -11,8 +11,31 @@ interface QuestionProps {
 }
 
 export class Question extends Entity<QuestionProps> {
+  get title(): string {
+    return this.props.title;
+  }
+
+  get content(): string {
+    return this.props.content;
+  }
+
+  get slug(): Slug {
+    return this.props.slug;
+  }
+
+  get authorId(): UniqueEntityID {
+    return this.props.authorId;
+  }
+
+  get bestAnswerId(): UniqueEntityID | undefined {
+    return this.props.bestAnswerId;
+  }
+
   static create(props: QuestionProps, id?: UniqueEntityID): Question {
-    const question = new Question(props, id);
+    const question = new Question(
+      { ...props, slug: props.slug ?? Slug.createFromString(props.title) },
+      id
+    );
 
     return question;
   }
